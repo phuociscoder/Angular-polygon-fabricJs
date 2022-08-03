@@ -1,0 +1,13 @@
+
+<div (contextmenu)="contextMenu()" class="main">
+    <canvas (contextmenu)="contextMenu()" id="canvas" width="1200" height="700"></canvas>
+</div>
+<div style="margin-top: 20px; padding-left: 20px;">
+    <button style="margin-left: 10px;" mat-flat-button color="primary" (click)="onReset()">Reset</button>
+</div>
+<div class="menu" [style.display]="menuOpts.display" [style.top.px]="menuOpts.top" [style.left.px]="menuOpts.left">
+    <mat-action-list>
+        <button mat-list-item (click)="onViewInfo()" > View Information </button>
+        <button mat-list-item (click)="onEditInfo()" > Edit Information </button>
+      </mat-action-list>
+</div>
